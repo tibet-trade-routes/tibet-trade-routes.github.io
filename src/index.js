@@ -17,10 +17,11 @@ for (const [name, color, path] of paths) {
       delay: 1000,
       dashArray: [10, 30],
       hardwareAccelerated: true,
-      weight: 5,
+      weight: 7,
       color,
       pulseColor: '#FFFFFF',
-      paused: false
+      paused: false,
+      reverse: true
     }
   );
   antPath.bindPopup(name);
