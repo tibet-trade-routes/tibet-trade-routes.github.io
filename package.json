@@ -5,8 +5,10 @@
   "description": "display tibet trade routes over time",
   "main": "index.js",
   "scripts": {
+    "build": "browserify src/index.js -o public/index.js",
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify src/index.js -o public/index.js"
   },
   "devDependencies": {
     "semistandard": "^17.0.0"
