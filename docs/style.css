@@ -1,3 +1,7 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -10,7 +14,7 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 15px;
-    width: 1000px;
+    width: 1200px;
     max-width: 100%;
 }
 
@@ -19,9 +23,14 @@
     max-width: 50%;
 }
 
+#info {
+    width: 1200px;
+    max-width: 100%;
+}
+
 #map {
-    height: 750px;
-    width: 1000px;
+    height: 700px;
+    width: 1200px;
     max-height: 80%;
     max-width: 100%;
 }

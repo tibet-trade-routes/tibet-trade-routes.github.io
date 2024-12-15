@@ -15,8 +15,8 @@ const locationsMap = require('./data/locations.js');
 const locationsLayer = [];
 for (const [name, data] of Object.entries(locationsMap)) {
   const circle = L.circle([data[0], data[1]], {
-    color: data[2] ? 'blue' : 'red',
-    fillColor: data[2] ? 'blue' : 'red',
+    color: 'blue',
+    fillColor: 'blue',
     fillOpacity: 0.5,
     hardwareAccelerated: true,
     radius: 5000

@@ -14,9 +14,32 @@
 
 <body>
     <div class="container">
-        <div>Year: <span id="year-display">1900</span></div>
+        <div id="info">
+            <p>
+                This dynamic map below shows the evolution of trade routes and the flow of people in and around Tibet from the beginning of
+                the 20th century (1900s) to the present-day. The black lines represent trade routes around the year 1900. The green lines
+                represent modern-day high-speed rail networks in China that connect to Tibet. Click on a trade route or rail line to find
+                out its name. The blue dots represent cities and other important stops along the trade routes. One interesting thing to note
+                is routes that parallel the historical <a href="https://education.nationalgeographic.org/resource/silk-road/">Silk Road</a>,
+                which is represented by the top two green lines and existed from the second century BCE to the mid-15th century. The
+                centrality of Lhasa is also a common thread between the two time periods - this is depicted by having the dots move toward
+                Lhasa.
+            </p>
+            <p>
+                <i>Created by: Geoffrey Wu</i>
+            </p>
+            <p>
+                References:<br>
+                “List of High-Speed Railway Lines in China.” <i>Wikipedia</i>, Wikimedia Foundation, 28 Nov. 2023, <a
+                    href="https://en.wikipedia.org/wiki/List_of_high-speed_railway_lines_in_China#/media/File:Rail_map_of_PRC.svg">en.wikipedia.org/wiki/List_of_high-speed_railway_lines_in_China#/media/File:Rail_map_of_PRC.svg</a>.<br>
+                Ryavec, Karl E. <i>A Historical Atlas of Tibet</i>. University of Chicago Press, 2015.<br>
+                Spengen, Willem Van. <i>Tibetan Border Worlds: A Geo-Historical Analysis of Trade and Traders</i>. Kegan Paul International,
+                2000.
+            </p>
+        </div>
         <div class="controls">
             <input type="range" min="1900" max="2024" value="1950" class="slider" id="slider">
+            <div>(Year: <span id="year-display">1900</span>)</div>
             <span>
                 <a href="#" id="pause">Pause</a>
                 <a href="#" id="play">Play</a>
