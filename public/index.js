@@ -14516,221 +14516,193 @@
 
 
 },{}],3:[function(require,module,exports){
-// https://supercolorpalette.com/?scp=G0-hsl-FF57A5-FF57EB-CD57FF-8657FF-576DFF-57B3FF-57F9FF-57FFBE-57FF78-7BFF57-C1FF57-FFF757
-
 const paths = [
-  [
-    'Silk Road',
-    '#FF57A5',
-    [
-      [39.4677, 75.9938, 'Kashgar'],
-      [38.4143, 77.2463, 'Yarkland'],
-      [37.4422, 78.5742, 'Muji'],
-      [37.1118, 79.9132, 'Khotan'],
-      [37.0677, 82.6961, 'Niya'],
-      [38.1333, 85.5333, 'Cherchen'],
-      [39.0333, 88, 'Charklik'],
-      [40.1422, 94.662, 'Dunhuang'],
-      [39.745, 98.508, 'Suzhou'],
-      [38.9439, 100.415, 'Ganzhou'],
-      [37.9282, 102.642, 'Liangzhou'],
-      [36.0614, 103.8342, 'Lanzhou']
-    ]
-  ],
-  [
-    'Silk Road',
-    '#FF57A5',
-    [
-      [39.0333, 88, 'Charklik'],
-      [36.3039, 98.0953, 'Dulan'],
-      [36.6173, 101.7778, 'Xining'],
-      [36.0614, 103.8342, 'Lanzhou']
-    ]
-  ],
-  [
-    'Lhasa to Xining',
-    '#FF57EB',
-    [
-      [31.4761, 92.0514, 'Nakchu'],
-      [34.1538, 97.4734, 'Waypoint1'],
-      [36.6173, 101.7778, 'Xining']
-    ]
-  ],
-  [
-    'Derge to Xining',
-    '#FF57EB',
-    [
-      [34.1538, 97.4734, 'Waypoint1'],
-      [33.0166, 96.7333, 'Jyekundo'],
-      [32.1692, 99.3576, 'Nianguxiang']
-    ]
-  ],
-  [
-    'Lhasa to Chamdo to Chengdu',
-    '#CD57FF',
-    [
-      [29.6526, 91.1378, 'Lhasa'],
-      [30.311, 91.5182, 'Reting'],
-      [31.4761, 92.0514, 'Nakchu'],
-      [31.8667, 93.7666, 'Sok'],
-      [31.4151, 95.591, 'Tengchen'],
-      [31.1407, 97.1723, 'Chamdo'],
-      [31.808, 98.5786, 'Derge'],
-      [32.1692, 99.3576, 'Nianguxiang'],
-      [31.6344, 99.9852, 'Kanze'],
-      [29.9985, 101.9569, 'Dartsedo'],
-      [30.66, 104.0633, 'Chengdu']
-    ]
-  ],
-  [
-    'Lhasa to Chamdo to Dartsedo',
-    '#8657FF',
-    [
-      [29.6526, 91.1378, 'Lhasa'],
-      [29.7555, 91.477, 'Ganden'],
-      [29.8817, 93.2486, 'Gyamda'],
-      [30.6409, 93.2324, 'Lhari'],
-      [30.7301, 95.6161, 'Shopamdo'],
-      [31.1407, 97.1723, 'Chamdo'],
-      [30.5763, 98.9747, 'Markham'],
-      [30.0166, 99.1166, 'Batang'],
-      [30.0166, 100.2666, 'Litang'],
-      [29.9985, 101.9569, 'Dartsedo']
-    ]
-  ],
-  [
-    'Markham to Dali',
-    '#576DFF',
-    [
-      [30.5763, 98.9747, 'Markham'],
-      [29.0313, 98.6044, 'Tsakhalho'],
-      [28.2, 98.9833, 'Dechen'],
-      [26.8565, 100.2271, 'Lijiang'],
-      [25.6065, 100.2676, 'Dali']
-    ]
-  ],
-  [
-    'Lhasa to Leh',
-    '#576DFF',
-    [
-      [29.6526, 91.1378, 'Lhasa'],
-      [28.9148, 89.6045, 'Gyantse'],
-      [29.267, 88.8812, 'Shigatse'],
-      [29.1153, 86.36, 'Chung Riwoche'],
-      [29.3294, 85.2342, 'Saga'],
-      [31.0675, 81.3119, 'Kailash'],
-      [31.728, 80.3371, 'Gartok'],
-      [34.1526, 77.5771, 'Leh'],
-      [37.4422, 78.5742, 'Muji']
-    ]
-  ],
-  [
-    'Lhasa to Leh',
-    '#576DFF',
-    [
-      [34.1526, 77.5771, 'Leh'],
-      [34.5539, 76.1349, 'Kargil'],
-      [34.0837, 74.7973, 'Srinagar']
-    ]
-  ],
-  [
-    'Lhasa to Leh',
-    '#576DFF',
-    [
-      [34.5539, 76.1349, 'Kargil'],
-      [35.3247, 75.551, 'Skardo']
-    ]
-  ],
-  [
-    'Gartok to Delhi to Patna',
-    '#57FFBE',
-    [
-      [31.728, 80.3371, 'Gartok'],
-      [31.105, 77.164, 'Simla'],
-      [30.901, 75.8573, 'Ludhiana'],
-      [28.7041, 77.1025, 'Delhi'],
-      [25.5941, 85.1376, 'Patna']
-    ]
-  ],
-  [
-    'Kailash to Patna',
-    '#57FFBE',
-    [
-      [31.0675, 81.3119, 'Kailash'],
-      [30.2848, 81.1767, 'Purang'],
-      [29.5878, 81.8823, 'Waypoint1'],
-      [28, 81.3461, 'Waypoint2'],
-      [25.5941, 85.1376, 'Patna']
-    ]
-  ],
-  [
-    'Chumbi Valley',
-    '#57B3FF',
-    [
-      [28.9148, 89.6045, 'Gyantse'],
-      [27.7182, 89.155, 'Phari'],
-      [27.4861, 88.9071, 'Dromo'],
-      [27.3325, 88.614, 'Gangtok'],
-      [27.06, 88.47, 'Kalimpong'],
-      [27.0375, 88.2631, 'Darjeeling'],
-      [26.7283, 88.3954, 'Siliguri'],
-      [22.5723, 88.3651, 'Calcutta']
-    ]
-  ],
-  [
-    'Lhasa to Kathmandu',
-    '#57F9FF',
-    [
-      [29.1522, 87.6945, 'Lhatse'],
-      [28.6597, 87.1239, 'Shelkar'],
-      [28.1572, 85.9793, 'Nyanang'],
-      [27.71, 85.32, 'Kathmandu'],
-      [28.2083, 83.9889, 'Pokhara'],
-      [29.183, 83.9566, 'Lo Mustang'],
-      [29.6923, 84.2362, 'Boburang']
-    ]
-  ],
-  [
-    'Kathmandu to Patna',
-    '#57F9FF',
-    [
-      [27.71, 85.32, 'Kathmandu'],
-      [25.5941, 85.1376, 'Patna']
-    ]
-  ]
+  ['Shigatse -- Lhasa -- Nyingchi', '#6bb6c7', ['Shigatse', 'Lhasa', 'Gyaca', 'Nyingchi']],
+  ['Lhasa -- Xining', '#bfbfbf', ['Lhasa', 'Nakchu', 'Golmud', 'Xining']],
+  ['Lanzhou -- Urumqi', '#d6b81b', ['Lanzhou', 'Xining', 'Zhangye', 'Jiayuguan', 'Hami', 'Turpan', 'Urumqi']],
+  ['Golmud -- Urumqi', '#bfbfbf', ['Golmud', 'Mangnai', 'Charklik', 'Korla', 'Urumqi']],
+  ['Ruoqiang -- Korla', '#bfbfbf', ['Charklik', 'Cherchen', 'Niya', 'Khotan', 'Kashgar', 'Aksu', 'Kuqa', 'Korla']]
 ];
 
 module.exports = paths;
 
 },{}],4:[function(require,module,exports){
+// name: [latitude, longitude, in ryavec, optional name]
+const locations = {
+  Batang: [30.0166, 99.1166, true],
+  Boburang: [29.6923, 84.2362, false],
+  Calcutta: [22.5723, 88.3651, true],
+  Chamdo: [31.1407, 97.1723, true],
+  Charklik: [39.0333, 88, true],
+  Chengdu: [30.66, 104.0633, true],
+  Cherchen: [38.1333, 85.5333, true],
+  'Chung Riwoche': [29.1153, 86.36, true],
+  Dali: [25.6065, 100.2676, true],
+  Darjeeling: [27.0375, 88.2631, true],
+  Dartsedo: [29.9985, 101.9569, true],
+  Dechen: [28.2, 98.9833, true],
+  Delhi: [28.7041, 77.1025, true],
+  Derge: [31.808, 98.5786, true],
+  Dromo: [27.4861, 88.9071, true],
+  Dulan: [36.3039, 98.0953, true],
+  Dunhuang: [40.1422, 94.662, true],
+  Ganden: [29.7555, 91.477, true],
+  Gangtok: [27.3325, 88.614, true],
+  Ganzhou: [38.9439, 100.415, true],
+  Gartok: [31.728, 80.3371, true],
+  Gyamda: [29.8817, 93.2486, true],
+  Gyantse: [28.9148, 89.6045, true],
+  Jyekundo: [33.0166, 96.7333, true],
+  Kailash: [31.0675, 81.3119, true],
+  Kalimpong: [27.06, 88.47, true],
+  Kanze: [31.6344, 99.9852, true],
+  Kargil: [34.5539, 76.1349, true],
+  Kashgar: [39.4677, 75.9938, true],
+  Kathmandu: [27.71, 85.32, true],
+  Khotan: [37.1118, 79.9132, true],
+  Lanzhou: [36.0614, 103.8342, true],
+  Leh: [34.1526, 77.5771, true],
+  Lhari: [30.6409, 93.2324, true],
+  Lhasa: [29.6526, 91.1378, true],
+  Lhatse: [29.1522, 87.6945, false],
+  Liangzhou: [37.9282, 102.642, true],
+  Lijiang: [26.8565, 100.2271, true, 'Satham'],
+  Litang: [30.0166, 100.2666, true],
+  'Lo Mustang': [29.183, 83.9566, true],
+  Ludhiana: [30.901, 75.8573, true],
+  Markham: [30.5763, 98.9747, true, 'https://treasuryoflives.org/institution/Drayab-Monastery'],
+  Muji: [37.4422, 78.5742, false],
+  Nakchu: [31.4761, 92.0514, true],
+  Nianguxiang: [32.1692, 99.3576, false],
+  Niya: [37.0677, 82.6961, true],
+  Nyanang: [28.1572, 85.9793, true],
+  Patna: [25.5941, 85.1376, true],
+  Phari: [27.7182, 89.155, true],
+  Pokhara: [28.2083, 83.9889, true],
+  Purang: [30.2848, 81.1767, true],
+  Reting: [30.311, 91.5182, true],
+  Saga: [29.3294, 85.2342, true],
+  Shelkar: [28.6597, 87.1239, true],
+  Shigatse: [29.267, 88.8812, true],
+  Shopamdo: [30.7301, 95.6161, true],
+  Siliguri: [26.7283, 88.3954, true],
+  Simla: [31.105, 77.164, true],
+  Skardo: [35.3247, 75.551, true],
+  Sok: [31.8667, 93.7666, true],
+  Srinagar: [34.0837, 74.7973, true],
+  Suzhou: [39.745, 98.508, true],
+  Tengchen: [31.4151, 95.591, true],
+  Tsakhalho: [29.0313, 98.6044, true],
+  Waypoint0: [34.1538, 97.4734, false],
+  Waypoint1: [29.5878, 81.8823, false],
+  Waypoint2: [28, 81.3461, false],
+  Xining: [36.6173, 101.7778, true],
+  Yarkland: [38.4143, 77.2463, true],
+  Gyaca: [29.1431, 92.5919, false],
+  Nyingchi: [29.6488, 94.3614, false],
+  Golmud: [36.4072, 94.9283, false],
+  Urumqi: [43.8225, 87.6125, false],
+  Turpan: [42.9512, 89.1895, false],
+  Hami: [42.8193, 93.5151, false],
+  Jiayuguan: [39.7732, 98.2882, false],
+  Zhangye: [38.9248, 100.4499, false],
+  Korla: [41.7259, 86.1746, false],
+  Mangnai: [38.25, 90.857, false],
+  Aksu: [41.185, 80.2904, false],
+  Kuqa: [41.7166, 82.9667, false]
+};
+module.exports = locations;
+
+},{}],5:[function(require,module,exports){
+// https://supercolorpalette.com/?scp=G0-hsl-FF57A5-FF57EB-CD57FF-8657FF-576DFF-57B3FF-57F9FF-57FFBE-57FF78-7BFF57-C1FF57-FFF757
+
+const paths = [
+  ['Silk Road (Northern Branch)', '#FF57A5', ['Kashgar', 'Yarkland', 'Muji', 'Khotan', 'Niya', 'Cherchen', 'Charklik', 'Dunhuang', 'Suzhou', 'Ganzhou', 'Liangzhou', 'Lanzhou']],
+  ['Silk Road (Southern Branch)', '#FF57A5', ['Charklik', 'Dulan', 'Xining', 'Lanzhou']],
+  ['Lhasa -- Chamdo -- Chengdu', '#CD57FF', ['Lhasa', 'Reting', 'Nakchu', 'Sok', 'Tengchen', 'Chamdo', 'Derge', 'Nianguxiang', 'Kanze', 'Dartsedo', 'Chengdu']],
+  ['Lhasa -- Xining', '#FF57EB', ['Lhasa', 'Reting', 'Nakchu', 'Waypoint0', 'Xining']],
+  ['Nakchu -- Nianguxiang', '#FF57EB', ['Nakchu', 'Waypoint0', 'Jyekundo', 'Nianguxiang']],
+  ['Lhasa -- Chamdo -- Dartsedo', '#8657FF', ['Lhasa', 'Ganden', 'Gyamda', 'Lhari', 'Shopamdo', 'Chamdo', 'Markham', 'Batang', 'Litang', 'Dartsedo']],
+  ['Markham -- Dali', '#576DFF', ['Markham', 'Tsakhalho', 'Dechen', 'Lijiang', 'Dali']],
+  ['Lhasa -- Leh', '#576DFF', ['Lhasa', 'Gyantse', 'Shigatse', 'Chung Riwoche', 'Saga', 'Kailash', 'Gartok', 'Leh', 'Muji']],
+  ['Leh -- Srinagar', '#576DFF', ['Leh', 'Kargil', 'Srinagar']],
+  ['Leh -- Skardo', '#576DFF', ['Leh', 'Kargil', 'Skardo']],
+  ['Gartok -- Delhi -- Patna', '#57FFBE', ['Gartok', 'Simla', 'Ludhiana', 'Delhi', 'Patna']],
+  ['Kailash -- Patna', '#57FFBE', ['Kailash', 'Purang', 'Waypoint1', 'Waypoint2', 'Patna']],
+  ['Gyantse -- Calcutta (Chumbi Valley)', '#57B3FF', ['Gyantse', 'Phari', 'Dromo', 'Gangtok', 'Kalimpong', 'Darjeeling', 'Siliguri', 'Calcutta']],
+  ['Lhasa -- Kathmandu', '#57F9FF', ['Lhasa', 'Gyantse', 'Shigatse', 'Lhatse', 'Shelkar', 'Nyanang', 'Kathmandu', 'Pokhara', 'Lo Mustang', 'Boburang']],
+  ['Pokhara -- Patna', '#57F9FF', ['Pokhara', 'Patna']]
+];
+
+module.exports = paths;
+
+},{}],6:[function(require,module,exports){
 const L = require('leaflet');
 const { AntPath } = require('leaflet-ant-path');
 
-const map = L.map('map');
+const map = L.map('map', { preferCanvas: true });
 map.setView([34, 93], 5);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-const paths = require('./data/ryavec.js');
+const locationsMap = require('./data/locations.js');
+const locationsLayer = [];
+for (const [name, data] of Object.entries(locationsMap)) {
+  const circle = L.circle([data[0], data[1]], {
+    color: data[2] ? 'blue' : 'red',
+    fillColor: data[2] ? 'blue' : 'red',
+    fillOpacity: 0.5,
+    hardwareAccelerated: true,
+    radius: 5000
+  });
+  circle.bindPopup(name);
+  locationsLayer.push(circle);
+}
 
-for (const [name, color, path] of paths) {
+const ryavecPaths = require('./data/ryavec.js');
+const ryavecLayer = [];
+for (const [name, color, locations] of ryavecPaths) {
   const antPath = new AntPath(
-    path.map(([lat, lng]) => [lat, lng]),
+    locations.map(location => [locationsMap[location][0], locationsMap[location][1]]),
     {
       delay: 1000,
       dashArray: [10, 30],
       hardwareAccelerated: true,
       weight: 7,
-      color,
+      fillOpacity: 1,
+      color: 'black',
       pulseColor: '#FFFFFF',
       paused: false,
       reverse: true
     }
   );
   antPath.bindPopup(name);
-  map.addLayer(antPath);
+  ryavecLayer.push(antPath);
 }
 
-},{"./data/ryavec.js":3,"leaflet":2,"leaflet-ant-path":1}]},{},[4]);
+const crhPaths = require('./data/crh.js');
+const crhLayer = [];
+for (const [name, color, locations] of crhPaths) {
+  const antPath = new AntPath(
+    locations.map(location => [locationsMap[location][0], locationsMap[location][1]]),
+    {
+      delay: 1000,
+      dashArray: [10, 30],
+      hardwareAccelerated: true,
+      weight: 7,
+      color: 'green',
+      pulseColor: '#FFFFFF',
+      paused: false,
+      reverse: true
+    }
+  );
+  antPath.bindPopup(name);
+  crhLayer.push(antPath);
+}
+L.layerGroup(ryavecLayer).addTo(map);
+L.layerGroup(crhLayer).addTo(map);
+L.layerGroup(locationsLayer).addTo(map);
+
+},{"./data/crh.js":3,"./data/locations.js":4,"./data/ryavec.js":5,"leaflet":2,"leaflet-ant-path":1}]},{},[6]);
