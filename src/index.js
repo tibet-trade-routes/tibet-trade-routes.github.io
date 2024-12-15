@@ -64,13 +64,21 @@ for (const [name, color, locations] of crhPaths) {
   antPath.bindPopup(name);
   crhLayer.push(antPath);
 }
-const layerControl = L.control.layers(
-  { Cities: L.layerGroup(locationsLayer).addTo(map) },
-  {
-    '1900s Trade Routes': L.layerGroup(ryavecLayer).addTo(map),
-    'Present-Day High-Speed Rail': L.layerGroup(crhLayer).addTo(map)
-  }
-).addTo(map);
+L.layerGroup(locationsLayer).addTo(map);
+L.layerGroup(ryavecLayer).addTo(map);
+L.layerGroup(crhLayer).addTo(map);
+
+const legend = L.control();
+legend.onAdd = function (map) {
+  const div = L.DomUtil.create('div', 'info legend');
+  div.style.backgroundColor = 'white';
+  div.style.padding = '0px 15px 5px 15px';
+  div.innerHTML += '<h4>Legend</h4>';
+  div.innerHTML += '<span style="background: #7b7668; width: 20px; height: 4px; display: inline-block; margin-right: 5px;"></span> 1900s Trade Routes<br>';
+  div.innerHTML += '<span style="background: #78b774; width: 20px; height: 4px; display: inline-block; margin-right: 5px;"></span> Present-Day Rail Lines<br>';
+  return div;
+};
+legend.addTo(map);
 
 function updateTradeRoutes (year) {
   let weight = (yearRange[1] - year) / (yearRange[1] - yearRange[0]) * (weightRange[1] - weightRange[0]) + weightRange[0];
