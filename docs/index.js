@@ -14703,9 +14703,13 @@ for (const [name, color, locations] of crhPaths) {
   antPath.bindPopup(name);
   crhLayer.push(antPath);
 }
-L.layerGroup(ryavecLayer).addTo(map);
-L.layerGroup(crhLayer).addTo(map);
-L.layerGroup(locationsLayer).addTo(map);
+const layerControl = L.control.layers(
+  { Cities: L.layerGroup(locationsLayer).addTo(map) },
+  {
+    '1900s Trade Routes': L.layerGroup(ryavecLayer).addTo(map),
+    'Present-Day High-Speed Rail': L.layerGroup(crhLayer).addTo(map)
+  }
+).addTo(map);
 
 function updateTradeRoutes (year) {
   let weight = (yearRange[1] - year) / (yearRange[1] - yearRange[0]) * (weightRange[1] - weightRange[0]) + weightRange[0];
