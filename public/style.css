@@ -3,9 +3,33 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    width: 1000px;
+    max-width: 100%;
+}
+
+.slider {
+    width: 500px;
+    max-width: 50%;
 }
 
 #map {
     height: 750px;
     width: 1000px;
+    max-height: 80%;
+    max-width: 100%;
+}
+
+#pause, #play {
+    border-radius: 6px;
+    border: black 2px solid;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
 }

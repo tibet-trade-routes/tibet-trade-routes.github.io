@@ -14,6 +14,14 @@
 
 <body>
     <div class="container">
+        <div>Year: <span id="year-display">1900</span></div>
+        <div class="controls">
+            <input type="range" min="1900" max="2024" value="1950" class="slider" id="slider">
+            <span>
+                <a href="#" id="pause">Pause</a>
+                <a href="#" id="play">Play</a>
+            </span>
+        </div>
         <div id="map"></div>
     </div>
     <script src="index.js"></script>
