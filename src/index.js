@@ -118,7 +118,7 @@ function play () {
     updateTradeRoutes(currentYear);
     document.getElementById('year-display').innerText = currentYear;
     document.getElementById('slider').value = currentYear;
-  }, 20);
+  }, 60);
 }
 
 play();
