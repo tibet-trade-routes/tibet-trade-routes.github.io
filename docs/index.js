@@ -14661,6 +14661,7 @@ for (const [name, data] of Object.entries(locationsMap)) {
     radius: 5000
   });
   circle.bindPopup(name);
+  circle.bindTooltip(name, { permanent: true, direction: 'top' }); // Add label to circle
   locationsLayer.push(circle);
 }
 
@@ -14708,11 +14709,16 @@ L.layerGroup(ryavecLayer).addTo(map);
 L.layerGroup(crhLayer).addTo(map);
 
 const legend = L.control();
+const overlays = {
+  Locations: L.layerGroup(locationsLayer).addTo(map)
+};
+L.control.layers(null, overlays).addTo(map);
 legend.onAdd = function (map) {
   const div = L.DomUtil.create('div', 'info legend');
   div.style.backgroundColor = 'white';
-  div.style.padding = '0px 15px 5px 15px';
-  div.innerHTML += '<h4>Legend</h4>';
+  div.style.padding = '5px 15px 5px 15px';
+  div.innerHTML += 'Use the above menu to toggle city names.';
+  div.innerHTML += '<p style="margin-top: 5px; margin-bottom: 0px"><b>Legend</b></p>';
   div.innerHTML += '<span style="background: #7b7668; width: 20px; height: 4px; display: inline-block; margin-right: 5px;"></span> 1900s Trade Routes<br>';
   div.innerHTML += '<span style="background: #78b774; width: 20px; height: 4px; display: inline-block; margin-right: 5px;"></span> Present-Day Rail Lines<br>';
   return div;
